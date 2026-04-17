@@ -24,7 +24,6 @@ net = ["dep:microsandbox-network", "microsandbox-runtime/net"]
 bytes.workspace = true
 chrono.workspace = true
 crossterm.workspace = true
-dbus.workspace = true
 docker_credential = "1.3.2"
 dirs.workspace = true
 flate2.workspace = true
@@ -68,4 +67,5 @@ keyring = { version = "3.6.3", features = ["apple-native"] }
 keyring = { version = "3.6.3", features = ["windows-native"] }
 
 [target.'cfg(target_os = "linux")'.dependencies]
+dbus = { version = "0.9", features = ["vendored"]}
 keyring = { version = "3.6.3", features = ["linux-native-sync-persistent", "crypto-rust"] }
